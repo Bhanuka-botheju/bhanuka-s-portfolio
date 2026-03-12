@@ -266,7 +266,7 @@ export default function HomePage() {
                   {block.results.map((r, ri) => (
                     <div key={ri} className="flex items-center justify-between">
                       <span className="text-sm text-white/70">{r.subject}</span>
-                      <GradeBadge grade={r.grade} />
+                      <GradeBadge grade={String(r.grade)} />
                     </div>
                   ))}
                 </div>
