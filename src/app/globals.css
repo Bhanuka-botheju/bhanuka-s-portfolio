@@ -119,11 +119,70 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;
+    --font-sans: var(--font-inter, "Inter", ui-sans-serif, system-ui, sans-serif);
   }
   html {
     @apply font-sans;
+    scroll-behavior: smooth;
   }
+}
+
+/* ── Portfolio custom theme ── */
+:root {
+  --navy:   #0a0f1e;
+  --navy2:  #0d1526;
+  --teal:   #14b8a6;
+  --teal2:  #0d9488;
+  --cyan:   #22d3ee;
+  --purple: #a855f7;
+  --card-dark: rgba(255,255,255,0.04);
+  --card-border: rgba(255,255,255,0.08);
+}
+
+/* ── Gradient text util ── */
+.gradient-text {
+  background: linear-gradient(135deg, #14b8a6 0%, #22d3ee 40%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glass card ── */
+.glass-card {
+  background: var(--card-dark);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(20, 184, 166, 0.12);
+}
+
+/* ── Section common padding ── */
+.section-pad {
+  padding: 5rem 1.5rem;
+}
+
+/* ── Fade-up animation ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+.animate-fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0f1e; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #14b8a6, #a855f7);
+  border-radius: 3px;
 }
