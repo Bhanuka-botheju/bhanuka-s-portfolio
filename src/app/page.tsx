@@ -19,6 +19,13 @@ import {
 const educationTimeline = [
   {
     year: "2023 – Present",
+    institution: "Incubate Labs (pvt) ltd",
+    degree: "AI & ML Engineer intern",
+    specialization: "",
+    icon: GraduationCap,
+  },
+  {
+    year: "2023 – Present",
     institution: "University of Mortuwa",
     degree: "B.Sc. (Eng) Hons Computer Science",
     specialization: "Specializing in Data Science",
@@ -152,10 +159,13 @@ export default function HomePage() {
 
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/background.jpg"
+            src="/images/background.jpeg"
             alt="Hero background"
             fill
             priority
+            quality={100}      // <--- Increase quality
+            sizes="100vw"      // <--- Tell the browser to use full width
+            // unoptimized     // <--- Uncomment this if it's still blurry
             style={{ objectPosition: '50% 27.5%' }}
             className="object-cover opacity-60"
           />
@@ -345,7 +355,7 @@ export default function HomePage() {
 
       {/* ══ FOOTER ══ */}
       <footer className="border-t border-white/5 py-8 text-center text-white/30 text-sm">
-        <p>© {new Date().getFullYear()} Bhanuka. Built with Next.js & shadcn/ui</p>
+        <p>© {new Date().getFullYear()} Bhanuka botheju. All right reserved</p>
       </footer>
     </main>
   );

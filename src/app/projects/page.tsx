@@ -14,63 +14,69 @@ import {
 const projects = [
   {
     title: "Generatively Pretrained Transformer (nano-GPT)",
-    date: "Nov 2024",
+    date: "feb 2026",
     summary:
       "build a Generatively Pretrained Transformer (GPT), following the paper 'Attention is All You Need'and OpenAI's GPT-2 / GPT-3.",
     tags: ["Deep Learning", "Shekespeare", "PyTorch", "Python"],
     icon: Brain,
     accent: "from-teal-500 to-cyan-500",
     glow: "shadow-teal-500/20",
+    link: "https://github.com/Bhanuka-botheju/nano_gpt"
   },
   {
-    title: "Crop Yield Optimization Dashboard",
-    date: "Aug 2024",
+    title: "AI Sales Assistant Chatbot",
+    date: "Aug 2025",
     summary:
-      "An interactive analytics platform for Sri Lankan farmers to visualize crop yield trends, soil health metrics, and weather correlation. Deployed with FastAPI + React.",
-    tags: ["Data Visualization", "FastAPI", "React", "PostgreSQL"],
+      "A smart AI sales assistant built with BERT and the DSTC8 dataset to handle complex, multi-turn customer conversations, integrated with MCP for real-time product data retrieval.",
+    tags: ["NLP", "BERT", "DSTC8", "FastAPI", "PostgreSQL"],
     icon: BarChart2,
     accent: "from-green-500 to-emerald-500",
     glow: "shadow-green-500/20",
+    link: "https://github.com/birunthabanr/AI-Sales-Assistant"
   },
   {
-    title: "Automated Physics Class Management Bot",
+    title: "HRMS_Database_project",
     date: "Jun 2024",
     summary:
-      "A Telegram bot managing 200+ A/L students — auto-distributes PDF notes, sends reminders, tracks attendance, and handles Q&A via a simple NLP pipeline.",
-    tags: ["NLP", "Telegram API", "Python", "SQLite"],
+      "A full-stack Human Resource Management System (HRMS) designed to streamline administrative workflows like employee tracking and attendance. The platform features a dynamic React frontend powered by a high-performance FastAPI backend, with secure and scalable data storage handled by a MySQL database.",
+    tags: ["Database", "SQL", "Python", "SQLite"],
     icon: Bot,
     accent: "from-purple-500 to-pink-500",
     glow: "shadow-purple-500/20",
+    link: "https://github.com/dewminawijekoon/HRMS_DataBase_Project"
   },
   {
-    title: "Social Media Sentiment Analyzer",
+    title: "mythical mayhem game development using java",
     date: "Mar 2024",
     summary:
-      "Real-time sentiment analysis of Twitter/X data for Sri Lankan political events using a fine-tuned BERT model. Includes a live dashboard with trend analysis.",
-    tags: ["NLP", "BERT", "Streamlit", "Twitter API"],
+      "A collaborative Java-based game developed as a second-semester Computer Science and Engineering group project at the University of Moratuwa, demonstrating core object-oriented programming principles in action",
+    tags: ["Game Development", "Java", "Swing"],
     icon: Globe,
     accent: "from-blue-500 to-indigo-500",
     glow: "shadow-blue-500/20",
+    link: "https://github.com/Bhanuka-botheju/mythical-mayhem"
   },
   {
-    title: "Student Performance Predictor",
-    date: "Jan 2024",
+    title: "Price prediction model",
+    date: "Jan 2026",
     summary:
-      "Random Forest + XGBoost ensemble model predicting A/L student failure risk based on mock exam patterns, attendance, and demographic data. 91% precision.",
+      "This dynamic pricing model leverages a DeepAR neural network to accurately forecast upcoming user traffic and demand. Those time-series predictions are then fed into an XGBoost-powered core engine, which evaluates them alongside real-time competitor rates to recommend optimal, data-driven prices.",
     tags: ["Machine Learning", "Scikit-learn", "XGBoost", "Pandas"],
     icon: Database,
     accent: "from-orange-500 to-amber-500",
     glow: "shadow-orange-500/20",
+    link: "https://github.com/Bhanuka-botheju/price_prediction_model"
   },
   {
-    title: "Edge AI Traffic Counter",
-    date: "Oct 2023",
+    title: "AI vs Human Generated Image Classification",
+    date: "Oct 2024",
     summary:
-      "Deployed YOLOv8 on a Raspberry Pi 4 to count and classify vehicles at intersections. Sends real-time JSON reports to a cloud dashboard via MQTT.",
-    tags: ["Computer Vision", "YOLOv8", "Edge AI", "Raspberry Pi"],
+      "A machine learning project that classifies images as either AI-generated or human-created using deep learning models.",
+    tags: ["Machine Learning", "Deep Learning", "Computer Vision"],
     icon: Cpu,
     accent: "from-rose-500 to-red-500",
     glow: "shadow-rose-500/20",
+    link: "https://github.com/Bhanuka-botheju/ai-vs-human-generated-image-classification-"
   },
 ];
 
@@ -138,9 +144,17 @@ export default function ProjectsPage() {
                 </div>
 
                 {/* Read more */}
-                <div className="flex items-center gap-1.5 text-xs text-teal-400 font-medium group-hover:gap-3 transition-all duration-200 pt-1 border-t border-white/5">
+                {/* <div className="flex items-center gap-1.5 text-xs text-teal-400 font-medium group-hover:gap-3 transition-all duration-200 pt-1 border-t border-white/5">
                   Read more <ArrowRight className="w-3.5 h-3.5" />
-                </div>
+                </div> */}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs text-teal-400 font-medium group-hover:gap-3 transition-all duration-200 pt-1 border-t border-white/5"
+                >
+                  Read more <ArrowRight className="w-3.5 h-3.5" />
+                </a>
               </article>
             );
           })}
