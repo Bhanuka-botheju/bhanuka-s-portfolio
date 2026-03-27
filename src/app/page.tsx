@@ -257,7 +257,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ══ EXAM RESULTS ══ */}
+      {/* ══ EXAM RESULTS ══
       <section id="results" className="section-pad bg-white/[0.02]">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-2">
@@ -284,7 +284,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ══ EXTRA-CURRICULAR ══ */}
       <section id="extracurricular" className="section-pad max-w-4xl mx-auto">
